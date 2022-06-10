@@ -1,6 +1,5 @@
 server:
-  port:9000
-
+  port: 9000
 eureka:
   client:
     register-with-eureka: true
@@ -24,7 +23,7 @@ spring:
           uri: lb://ORDER-SERVICE
           predicates:
              - Path=/api/v1/orders/**
-        - id: ORDER-SERVICE
+        - id: BOOK-SERVICE
           uri: lb://BOOK-SERVICE
           predicates:
             - Path=/api/v1/books/**
